@@ -34,6 +34,12 @@ RUN apt-get update \
   && composer config -g process-timeout 3600 \
   && composer config -g repos.packagist composer https://packagist.org
 
+# add php-extention-module & xdebug
+RUN docker-php-ext-install mbstring pdo_mysql bcmath && \
+    docker-php-ext-enable mbstring && \
+    pecl install xdebug && \
+    docker-php-ext-enable xdebug
+
 FROM base AS development
 
 COPY ./infra/docker/php/php.development.ini /usr/local/etc/php/php.ini
