@@ -3,7 +3,7 @@ name: Laravel Testing
 on:
   pull_request:
     paths:
-      - 'backend/*'
+      - 'src/*'
 
 jobs:
   laravel-testing:
