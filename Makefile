@@ -23,7 +23,6 @@ install-recommend-packages:
 	docker compose exec app composer require --dev beyondcode/laravel-dump-server
 	docker compose exec app composer require --dev barryvdh/laravel-debugbar
 	docker compose exec app composer require --dev roave/security-advisories:dev-master
-	docker compose exec app composer require --dev --working-dir=tools/larastan nunomaduro/larastan
 	docker compose exec app composer require --dev nunomaduro/phpinsights
 	docker compose exec app composer require --dev doctrine/dbal
 	docker compose exec app php artisan vendor:publish --provider="BeyondCode\DumpServer\DumpServerServiceProvider"
@@ -31,6 +30,7 @@ install-recommend-packages:
 	docker compose exec app mkdir -p tools/php-cs-fixer
 	docker compose exec app composer require --working-dir=tools/php-cs-fixer friendsofphp/php-cs-fixer
 	docker compose exec app mkdir -p tools/larastan
+	docker compose exec app composer require --dev --working-dir=tools/larastan nunomaduro/larastan
 
 init:
 	docker compose up -d --build
