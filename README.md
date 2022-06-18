@@ -7,9 +7,11 @@
 
 Build a simple laravel development environment with docker-compose. Compatible with Windows(WSL2), macOS(M1) and Linux.
 
-## Usage
+詳細設定は [wiki](https://github.com/daishiman/initial-setting-laravel/wiki) 参照
 
-1. Click [Use this template](https://github.com/ucan-lab/docker-laravel/generate)
+## 使用方法
+
+1. Click [Use this template](https://github.com/daishiman/initial-setting-laravel)
 2. Git clone & change directory
 3. Execute the following command
 
@@ -20,36 +22,36 @@ $ make install-recommend-packages # Optional
 
 http://localhost
 
-## Tips
+## 参考
 
-- Read this [Makefile](https://github.com/ucan-lab/docker-laravel/blob/main/Makefile).
-- Read this [Wiki](https://github.com/ucan-lab/docker-laravel/wiki).
+- Read this [Makefile](https://github.com/daishiman/initial-setting-laravel/blob/main/Makefile).
+- Read this [Wiki](https://github.com/daishiman/initial-setting-laravel/wiki).
 
-## Container structures
+## コンテナ構造
 
 ```bash
-├── app
-├── web
-└── db
+├── mysql
+├── nginx
+└── php
 ```
 
-### app container
+### php コンテナ
 
 - Base image
   - [php](https://hub.docker.com/_/php):8.1-fpm-bullseye
   - [composer](https://hub.docker.com/_/composer):2.2
 
-### web container
+### nginx コンテナ
 
 - Base image
   - [nginx](https://hub.docker.com/_/nginx):1.22
 
-### db container
+### mysql コンテナ
 
 - Base image
   - [mysql/mysql-server](https://hub.docker.com/r/mysql/mysql-server):8.0
 
-### mailhog container
+### mailhog コンテナ
 
 - Base image
   - [mailhog/mailhog](https://hub.docker.com/r/mailhog/mailhog)
