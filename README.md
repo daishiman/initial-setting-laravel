@@ -7,6 +7,8 @@
 
 Build a simple laravel development environment with docker-compose. Compatible with Windows(WSL2), macOS(M1) and Linux.
 
+詳細設定は [wiki](https://github.com/daishiman/initial-setting-laravel/wiki) 参照
+
 ## 使用方法
 
 1. Click [Use this template](https://github.com/daishiman/initial-setting-laravel)
