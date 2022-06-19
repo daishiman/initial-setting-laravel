@@ -24,6 +24,8 @@
 
 - [ ] composer dump-autoload新規エラー無し
 - [ ] PHP-CS-Fixer の実行(make php-cs-fix)
+- [ ] larastan の実行(make larastan)
+- [ ] php insights の実行(make insights-fix)
 - [ ] phpunit 確認(./vendor/bin/phpunit tests/Feature --group XXXXX --testdox)
 - [ ] マイグレーションファイル更新時のロールバック動作確認
 - [ ] フロントエンドと結合しての動作確認
