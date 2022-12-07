@@ -11,6 +11,8 @@ Build a simple laravel development environment with docker-compose. Compatible w
 
 ## 使用方法
 
+このリポジトリをクローンする際は、「Use this template」をクリックし「Create a new repository」を選択してください。
+
 **詳細設定は [wiki](https://github.com/daishiman/initial-setting-laravel/wiki) 参照**
 
 1. Click [Use this template](https://github.com/daishiman/initial-setting-laravel)
