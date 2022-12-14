@@ -16,6 +16,11 @@ create-project:
 	docker compose exec app php artisan storage:link
 	docker compose exec app chmod -R 777 storage bootstrap/cache
 	@make fresh
+	@make npm-install
+		
+npm-install
+	docker compose exec app apt update
+	docker compose exec app apt install nodejs npm
 
 install-recommend-packages:
 	docker compose exec app composer update
@@ -132,6 +137,11 @@ cache-clear:
 	docker compose exec app composer clear-cache
 	@make optimize-clear
 	docker compose exec app php artisan event:clear
+	docker compose exec app php artisan cache:clear
+	docker compose exec app php artisan config:clear
+	docker compose exec app php artisan route:clear
+	docker compose exec app php artisan view:clear
+	docker compose exec app composer dump-autoload
 
 db:
 	docker compose exec db bash
