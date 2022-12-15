@@ -55,29 +55,27 @@ return $config
         'mb_str_functions' => true,
         'simplified_if_return' => true,
         'simplified_null_return' => true,
-        'binary_operator_spaces' => [
-            'align_double_arrow' => true,
-            'align_equals' => true,
-        ],
-        'blank_line_before_return' => true,
+        'binary_operator_spaces' => true,
+        'blank_line_before_statement' => true,
         'compact_nullable_typehint' => true,
         'concat_space' => [
-            'spacing' => 'single'
+            'spacing' => 'one'
         ],
         'function_typehint_space' => true,
         'lowercase_cast' => true,
-        'lowercase_constants' => true,
+        'constant_case' => true,
         'lowercase_keywords' => true,
         'method_argument_space' => [
-            'ensure_fully_multiline' => false,
+            'after_heredoc' => false,
             'keep_multiple_spaces_after_comma' => false,
         ],
-        'method_separation' => true,
+        'phpdoc_separation' => true,
+        'phpdoc_trim_consecutive_blank_line_separation' => true,
         'new_with_braces' => true,
         'no_empty_comment' => true,
         'no_empty_phpdoc' => true,
         'no_empty_statement' => true,
-        'no_extra_consecutive_blank_lines' => [
+        'no_extra_blank_lines' => [
             'tokens' => ['extra']
         ],
         'no_leading_import_slash' => true,
