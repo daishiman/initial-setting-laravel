@@ -46,6 +46,7 @@ return $config
         'phpdoc_align' => [
             'align' => 'left',
         ],
+        'array_indentation' =>  true,
         'not_operator_with_successor_space' => true,
         'blank_line_after_namespace' => true,
         'final_class' => true,
@@ -55,7 +56,6 @@ return $config
         'mb_str_functions' => true,
         'simplified_if_return' => true,
         'simplified_null_return' => true,
-        'binary_operator_spaces' => true,
         'blank_line_before_statement' => true,
         'compact_nullable_typehint' => true,
         'concat_space' => [
@@ -102,5 +102,6 @@ return $config
         'unary_operator_spaces' => true,
         'visibility_required' => true,
         'whitespace_after_comma_in_array' => true,
+        'binary_operator_spaces' => true,
     ])
     ->setFinder($finder);
