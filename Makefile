@@ -17,7 +17,7 @@ create-project:
 	docker compose exec app chmod -R 777 storage bootstrap/cache
 	@make fresh
 	@make npm-install
-		
+
 npm-install:
 	docker compose exec app apt update
 	docker compose exec app apt install nodejs npm
@@ -119,6 +119,7 @@ tinker:
 	docker compose exec app php artisan tinker
 
 test:
+	docker compose exec app php artisan config:clear
 	docker compose exec app php artisan test
 
 optimize:
