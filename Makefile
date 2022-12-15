@@ -18,7 +18,7 @@ create-project:
 	@make fresh
 	@make npm-install
 		
-npm-install
+npm-install:
 	docker compose exec app apt update
 	docker compose exec app apt install nodejs npm
 
